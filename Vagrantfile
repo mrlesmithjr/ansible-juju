@@ -11,6 +11,7 @@ Vagrant.configure(2) do |config|
     juju.vm.hostname = "juju"
 
     juju.vm.network :private_network, ip: "192.168.202.201"
+    juju.vm.network :forwarded_port, guest: 80, host: 8080
 
     juju.vm.provider "virtualbox" do |vb|
       vb.memory = "1024"
