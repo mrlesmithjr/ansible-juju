@@ -16,5 +16,7 @@
     name: "{{ item }}"
     state: present
   with_items:
-    - juju-quickstart
     - juju-core
+    - juju-deployer
+    - juju-quickstart
+    - charm-tools
